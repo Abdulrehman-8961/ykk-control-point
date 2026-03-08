@@ -1,0 +1,69 @@
+#GIF
+  <div class="col-lg-4    no-print" style="overflow-y: auto;height: 90vh;overflow-x:hidden;">
+                @foreach($qry as $q)
+                <div class="block block-rounded   table-block-new mb-2 pb-0  -  viewContent" data="{{$q->id}}"
+                    style="cursor:pointer;">
+                    <div class="block-content pt-1 pb-1 d-flex  pl-1 position-relative" style="height: 78px;">
+                        <div class="mr-1      justify-content-center align-items-center  d-flex">
+                            <img src="{{asset('/public')}}/icons/icon-gifi-grey.png" class=""
+                                style="padding-top: 12px;width: 70px;object-fit: cover;padding-bottom: 12px;padding-left: 12px;padding-right: 6px;">
+                        </div>
+                        <div class="w-100 d-flex justify-content-between" style="padding-left: 10px;">
+                            <div class="d-flex flex-column" style="width: calc(100% - 165px)">
+                                <span style="font-family: Calibri;color:#4194F6;font-size:12pt;font-weight:600;">GIFI</span>
+                                <span class="pl-1" style="overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                font-size:9pt;
+                                width: 60%;
+                                font-family: Calibri;color: #262626;border:1px solid #262626;background-color: #BFBFBF;border-radius: 4px;">{{$q->account_no}} - {{$q->sub_type}}</span>
+                                <div class="d-flex flex-row">
+                                    <div>
+                                        <span style="line-height: 24px;font-family: Calibri;font-size: 9pt;color:#3F3F3F;border:1px solid #3F3F3F;border-radius: 3px;padding-top: 1px;padding-bottom: 1px;margin-right: 0.675rem;" class="px-2">{{$q->account_type[0]}}</span>
+                                    </div>
+                                    <div style="overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;font-size: 10pt;font-family: Calibri;">
+                                        <span>{{$q->description}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column justify-content-between" style="padding-top: 4px;padding-bottom: 4px;width:30%;position: absolute;right: 20px;">
+                                <div>
+                                    @if($q->gifi_status==1)
+                                    <span style="float:right;width:70px !important;font-family: Calibri;color: #FFF;background-color: #4EA833;width:100%;padding-left: 8px;padding-right: 8px;padding-top: 7px;padding-bottom: 7px;display: block;line-height: 1;text-align: center;border-radius: 3px;font-size: 9pt;">Active</span>
+                                    @else
+                                    <span style="float:right;width:70px !important;font-family: Calibri;color: #FFF;background-color: #E54643;width:100%;padding-left: 8px;padding-right: 8px;padding-top: 7px;padding-bottom: 7px;display: block;line-height: 1;text-align: center;border-radius: 3px;font-size: 9pt;">Inactive</span>
+                                    @endif
+                                </div>
+                                <div class="d-flex flex-row justify-content-end" style="margin-top: 10px;">
+                                    <div class="ActionIcon px-0 ml-2  " style="border-radius: 1rem;position: relative;">
+                                        <a href="javascript:;" class="client-info" data-notes="{{$q->note}}"
+                                            data="{{$q->id}}">
+                                            <img src="{{asset('public')}}/icons2/icon-comments-grey-2.png?cache=1"
+                                                width="25px">
+                                        </a>
+
+                                    </div>
+                                    <?php     if(Auth::check()){
+                                        if(@Auth::user()->role!='read'){ ?>
+                                    <div class="ActionIcon ml-2   px-0 " style="border-radius: 1rem">
+                                        <a href="javascript:;" data="{{$q->id}}" class="btnEdit ">
+                                            <img src="{{asset('public')}}/icons2/icon-edit-grey.png?cache=1"
+                                            width="25px">
+                                        </a>
+                                    </div>
+                                    <div class="ActionIcon ml-2 px-0 " style="border-radius: 1rem">
+                                        <a href="javascript:;" class="btnDelete" data="{{$q->id}}">
+                                            <img src="{{asset('public')}}/icons2/icon-delete-grey.png?cache=1"
+                                                width="25px">
+                                        </a>
+                                    </div>
+                                    <?php } }?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>

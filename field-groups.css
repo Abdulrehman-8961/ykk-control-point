@@ -1,0 +1,140 @@
+.bubble-debit {
+    font-family: Signika;
+    font-size: 12pt;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 36px;
+    text-align: right;
+}
+
+.bubble-debit-noval {
+    background: #C0DBFC;
+    color: #3F3F3F
+}
+
+.bubble-debit-wval {
+    background: #4194F6;
+    color: #fff
+}
+
+
+.bubble-credit {
+    font-family: Signika;
+    font-size: 12pt;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 36px;
+    text-align: right;
+}
+
+.bubble-credit-noval {
+    background:  #F3A9A7;
+    color: #3F3F3F
+}
+
+.bubble-credit-wval {
+    background:  #E54643;
+    color:  #fff
+}
+
+
+.bubble-taxes {
+    font-family: Calibri;
+    font-size: 12pt;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 36px;
+    text-align: right;
+}
+
+.bubble-taxes-noval {
+    background: #A0DD8E;
+    color: #3F3F3F
+}
+
+.bubble-taxes-wval {
+    background: #4EA833;
+    color: #fff
+}
+
+
+
+
+
+.form-debit {
+    background-color: #C0DBFC;
+    font-family: Jura;
+    border: 0;
+    color: #3F3F3F;
+    font-size: 12pt;
+    text-align: right;
+}
+
+.form-credit {
+    font-family: Jura;
+    background-color: #F3A9A7;
+    border:  0;
+    color: #3F3F3F;
+    font-size: 12pt;
+    text-align: right;
+}
+
+.form-taxes {
+    font-family: Jura;
+    background-color: #A0DD8E;
+    color: #3F3F3F;
+    font-size: 12pt;
+    border: 0;
+    text-align: right;
+}
+
+
+
+
+.form-debit:focus {
+    -webkit-box-shadow: 0px 0px 1px 1px rgba(65, 148, 246, 1);
+            -moz-box-shadow: 0px 0px 1px 1px rgba(65, 148, 246, 1);
+            box-shadow: 0px 0px 1px 1px rgba(65, 148, 246, 1);
+    background-color: #4194F6 !important;
+    color: #fff !important;
+}
+
+.form-credit:focus {
+    -webkit-box-shadow: 0px 0px 1px 1px rgba(229, 70, 67, 1);
+            -moz-box-shadow: 0px 0px 1px 1px rgba(229, 70, 67, 1);
+            box-shadow: 0px 0px 1px 1px rgba(229, 70, 67, 1);
+    background:  #E54643 !important;
+    color:  #fff !important
+}
+
+.form-taxes:focus {
+    -webkit-box-shadow: 0px 0px 1px 1px rgba(78, 168, 51, 1) ;
+            -moz-box-shadow: 0px 0px 1px 1px rgba(78, 168, 51, 1) ;
+            box-shadow: 0px 0px 1px 1px rgba(78, 168, 51, 1) ;
+    background: #4EA833 !important;
+    color: #fff !important
+}
+
+
+
+.form-debit,
+        .form-credit,
+        .form-taxes {
+            color: #3F3F3F;
+        }
+
+        
+
+

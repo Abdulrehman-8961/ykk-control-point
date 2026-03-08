@@ -1,0 +1,8 @@
+[14-Jul-2025 04:28:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/c2ld0ecbw2xs/public_html/ykk.ca/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/c2ld0ecbw2xs/public_html/ykk.ca/config/app.php on line 16
+[01-Aug-2025 04:50:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/c2ld0ecbw2xs/public_html/ykk.ca/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/c2ld0ecbw2xs/public_html/ykk.ca/config/database.php on line 18

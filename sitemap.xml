@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <urlset
+          xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+     <url>
+                 <loc>https://huzmark.tech/test.html</loc>
+                 <lastmod>2023-06-11T19:29:15+02:00</lastmod>
+                 <priority>0.80</priority>
+               </url> <url>
+                 <loc>https://huzmark.tech/news.html</loc>
+                 <lastmod>2023-06-11T19:29:15+02:00</lastmod>
+                 <priority>0.80</priority>
+               </url> <url>
+                 <loc>https://huzmark.tech/news/test.html</loc>
+                 <lastmod>2023-06-11T19:29:15+02:00</lastmod>
+                 <priority>0.80</priority>
+               </url> <url>
+                 <loc>https://huzmark.tech/privacy-policy.html</loc>
+                 <lastmod>2023-06-11T19:29:15+02:00</lastmod>
+                 <priority>0.80</priority>
+               </url> <url>
+                 <loc>https://huzmark.tech/feed.xml</loc>
+                 <lastmod>2023-06-11T19:29:15+02:00</lastmod>
+                 <priority>0.80</priority>
+               </url> <url>
+                 <loc>https://huzmark.tech/sitemap.xml</loc>
+                 <lastmod>2023-06-11T19:29:15+02:00</lastmod>
+                 <priority>0.80</priority>
+               </url> <url>
+                 <loc>https://huzmark.tech/sitemap.html</loc>
+                 <lastmod>2023-06-11T19:29:15+02:00</lastmod>
+                 <priority>0.80</priority>
+               </url> <url>
+                 <loc>https://huzmark.tech/about-us.html</loc>
+                 <lastmod>2023-06-11T19:29:15+02:00</lastmod>
+                 <priority>0.80</priority>
+               </url></urlset>

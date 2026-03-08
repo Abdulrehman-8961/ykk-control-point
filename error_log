@@ -1,0 +1,137 @@
+[12-Oct-2023 15:22:57 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 132136960 bytes) in /home/c2ld0ecbw2xs/public_html/gl_webapp/storage/framework/views/eec978bb1c90832cb3d198bea227eeeaae2bac5e.php on line 1245
+[12-Oct-2023 15:29:01 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 132136960 bytes) in /home/c2ld0ecbw2xs/public_html/gl_webapp/storage/framework/views/eec978bb1c90832cb3d198bea227eeeaae2bac5e.php on line 1245
+[18-Oct-2023 18:17:21 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 132136960 bytes) in /home/c2ld0ecbw2xs/public_html/gl_webapp/storage/framework/views/eec978bb1c90832cb3d198bea227eeeaae2bac5e.php on line 1245
+[18-Oct-2023 18:17:33 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 132136960 bytes) in /home/c2ld0ecbw2xs/public_html/gl_webapp/storage/framework/views/eec978bb1c90832cb3d198bea227eeeaae2bac5e.php on line 1245
+[19-Oct-2023 08:48:20 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 132136960 bytes) in /home/c2ld0ecbw2xs/public_html/gl_webapp/storage/framework/views/eec978bb1c90832cb3d198bea227eeeaae2bac5e.php on line 1245
+[19-Oct-2023 09:03:19 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 132136960 bytes) in /home/c2ld0ecbw2xs/public_html/gl_webapp/storage/framework/views/eec978bb1c90832cb3d198bea227eeeaae2bac5e.php on line 1245
+[19-Oct-2023 09:03:22 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 132136960 bytes) in /home/c2ld0ecbw2xs/public_html/gl_webapp/storage/framework/views/eec978bb1c90832cb3d198bea227eeeaae2bac5e.php on line 1245
+[19-Oct-2023 09:03:25 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 132136960 bytes) in /home/c2ld0ecbw2xs/public_html/gl_webapp/storage/framework/views/eec978bb1c90832cb3d198bea227eeeaae2bac5e.php on line 1245
+[19-Oct-2023 09:04:12 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 132136960 bytes) in /home/c2ld0ecbw2xs/public_html/gl_webapp/storage/framework/views/eec978bb1c90832cb3d198bea227eeeaae2bac5e.php on line 1245
+[19-Oct-2023 09:04:16 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 132136960 bytes) in /home/c2ld0ecbw2xs/public_html/gl_webapp/storage/framework/views/eec978bb1c90832cb3d198bea227eeeaae2bac5e.php on line 1245
+[19-Oct-2023 09:04:24 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 132136960 bytes) in /home/c2ld0ecbw2xs/public_html/gl_webapp/storage/framework/views/eec978bb1c90832cb3d198bea227eeeaae2bac5e.php on line 1245
+[19-Oct-2023 09:05:33 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 132136960 bytes) in /home/c2ld0ecbw2xs/public_html/gl_webapp/storage/framework/views/eec978bb1c90832cb3d198bea227eeeaae2bac5e.php on line 1245
+[15-Nov-2023 17:11:25 UTC] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1349
+Stack trace:
+#0 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/composer/ClassLoader.php(480): include('/home/c2ld0ecbw...')
+#2 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/composer/ClassLoader.php(346): Composer\Autoload\includeFile()
+#3 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Support/helpers.php(110): Composer\Autoload\ClassLoader->loadClass()
+#4 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect()
+#5 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config()
+#6 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(230): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap()
+#8 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Foundation\Application->bootstrapWith()
+#9 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(135): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(109): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
+#11 /home/c2ld0ecbw2xs/public_html/gl_webapp/public/index.php(55): Illuminate\Foundation\Http\Kernel->handle()
+#12 /home/c2ld0ecbw2xs/public_html/gl_webapp/index.php(20): require_once('/home/c2ld0ecbw...')
+#13 {main} in /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[15-Nov-2023 17:12:14 UTC] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1349
+Stack trace:
+#0 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/composer/ClassLoader.php(480): include('/home/c2ld0ecbw...')
+#2 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/composer/ClassLoader.php(346): Composer\Autoload\includeFile()
+#3 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Support/helpers.php(110): Composer\Autoload\ClassLoader->loadClass()
+#4 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect()
+#5 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config()
+#6 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(230): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap()
+#8 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Foundation\Application->bootstrapWith()
+#9 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(135): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(109): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
+#11 /home/c2ld0ecbw2xs/public_html/gl_webapp/public/index.php(55): Illuminate\Foundation\Http\Kernel->handle()
+#12 /home/c2ld0ecbw2xs/public_html/gl_webapp/index.php(20): require_once('/home/c2ld0ecbw...')
+#13 {main} in /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[15-Nov-2023 17:18:50 UTC] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1349
+Stack trace:
+#0 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/composer/ClassLoader.php(480): include('/home/c2ld0ecbw...')
+#2 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/composer/ClassLoader.php(346): Composer\Autoload\includeFile()
+#3 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Support/helpers.php(110): Composer\Autoload\ClassLoader->loadClass()
+#4 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect()
+#5 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config()
+#6 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(230): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap()
+#8 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Foundation\Application->bootstrapWith()
+#9 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(135): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(109): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
+#11 /home/c2ld0ecbw2xs/public_html/gl_webapp/public/index.php(55): Illuminate\Foundation\Http\Kernel->handle()
+#12 /home/c2ld0ecbw2xs/public_html/gl_webapp/index.php(20): require_once('/home/c2ld0ecbw...')
+#13 {main} in /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[15-Nov-2023 17:30:29 UTC] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1349
+Stack trace:
+#0 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/composer/ClassLoader.php(480): include('/home/c2ld0ecbw...')
+#2 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/composer/ClassLoader.php(346): Composer\Autoload\includeFile()
+#3 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Support/helpers.php(110): Composer\Autoload\ClassLoader->loadClass()
+#4 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect()
+#5 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config()
+#6 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(230): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap()
+#8 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Foundation\Application->bootstrapWith()
+#9 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(135): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(109): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
+#11 /home/c2ld0ecbw2xs/public_html/gl_webapp/public/index.php(55): Illuminate\Foundation\Http\Kernel->handle()
+#12 /home/c2ld0ecbw2xs/public_html/gl_webapp/index.php(20): require_once('/home/c2ld0ecbw...')
+#13 {main} in /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[15-Nov-2023 17:31:15 UTC] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1349
+Stack trace:
+#0 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/composer/ClassLoader.php(480): include('/home/c2ld0ecbw...')
+#2 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/composer/ClassLoader.php(346): Composer\Autoload\includeFile()
+#3 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Support/helpers.php(110): Composer\Autoload\ClassLoader->loadClass()
+#4 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect()
+#5 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config()
+#6 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(230): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap()
+#8 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Foundation\Application->bootstrapWith()
+#9 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(135): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(109): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
+#11 /home/c2ld0ecbw2xs/public_html/gl_webapp/public/index.php(55): Illuminate\Foundation\Http\Kernel->handle()
+#12 /home/c2ld0ecbw2xs/public_html/gl_webapp/index.php(20): require_once('/home/c2ld0ecbw...')
+#13 {main} in /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[31-Dec-2024 06:25:45 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 20480 bytes) in /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 338
+[24-Feb-2025 16:52:22 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 190485120 bytes) in /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 336
+[24-Feb-2025 16:52:43 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 190485120 bytes) in /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 336
+[03-Apr-2025 20:20:21 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 186345600 bytes) in /home/c2ld0ecbw2xs/public_html/gl_webapp/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 336
+[30-May-2025 12:34:56 UTC] PHP Warning:  require_once(/home/c2ld0ecbw2xs/public_html/ykk.ca/public/index.php): Failed to open stream: No such file or directory in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php on line 20
+[30-May-2025 12:34:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/c2ld0ecbw2xs/public_html/ykk.ca/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php on line 20
+[30-May-2025 12:34:57 UTC] PHP Warning:  require_once(/home/c2ld0ecbw2xs/public_html/ykk.ca/public/index.php): Failed to open stream: No such file or directory in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php on line 20
+[30-May-2025 12:34:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/c2ld0ecbw2xs/public_html/ykk.ca/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php on line 20
+[30-May-2025 12:34:58 UTC] PHP Warning:  require_once(/home/c2ld0ecbw2xs/public_html/ykk.ca/public/index.php): Failed to open stream: No such file or directory in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php on line 20
+[30-May-2025 12:34:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/c2ld0ecbw2xs/public_html/ykk.ca/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php on line 20
+[30-May-2025 12:34:59 UTC] PHP Warning:  require_once(/home/c2ld0ecbw2xs/public_html/ykk.ca/public/index.php): Failed to open stream: No such file or directory in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php on line 20
+[30-May-2025 12:34:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/c2ld0ecbw2xs/public_html/ykk.ca/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php on line 20
+[30-May-2025 12:35:00 UTC] PHP Warning:  require_once(/home/c2ld0ecbw2xs/public_html/ykk.ca/public/index.php): Failed to open stream: No such file or directory in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php on line 20
+[30-May-2025 12:35:00 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/c2ld0ecbw2xs/public_html/ykk.ca/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php on line 20
+[30-May-2025 12:35:01 UTC] PHP Warning:  require_once(/home/c2ld0ecbw2xs/public_html/ykk.ca/public/index.php): Failed to open stream: No such file or directory in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php on line 20
+[30-May-2025 12:35:01 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/c2ld0ecbw2xs/public_html/ykk.ca/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php on line 20
+[30-May-2025 12:35:02 UTC] PHP Warning:  require_once(/home/c2ld0ecbw2xs/public_html/ykk.ca/public/index.php): Failed to open stream: No such file or directory in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php on line 20
+[30-May-2025 12:35:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/c2ld0ecbw2xs/public_html/ykk.ca/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php on line 20
+[30-May-2025 12:35:02 UTC] PHP Warning:  require_once(/home/c2ld0ecbw2xs/public_html/ykk.ca/public/index.php): Failed to open stream: No such file or directory in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php on line 20
+[30-May-2025 12:35:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/c2ld0ecbw2xs/public_html/ykk.ca/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/c2ld0ecbw2xs/public_html/ykk.ca/index.php on line 20
+[23-Jun-2025 00:02:52 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 20480 bytes) in /home/c2ld0ecbw2xs/public_html/ykk.ca/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Collection/Cells.php on line 157
