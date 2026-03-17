@@ -771,6 +771,30 @@ Route::get('/return-to-login', function () {
 Route::post('/update-user-default-session', 'MainController@UpdateUserDefaultSession')->middleware('auth');
 Route::post('/update-user-password', 'MainController@UpdateUserPassword')->middleware('auth');
 
-Auth::routes(['verify' => false, 'register' => false]);
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+
+Route::get('password/reset', function () {
+  return view('auth.passwords.email');
+})->name('password.request');
+Route::post('password/email', 'Auth\CustomForgotPasswordController@sendResetLinkEmail')->name('password.email');
+Route::get('password/reset/{token}', function ($token) {
+  return view('auth.passwords.reset', [
+    'token' => $token,
+    'email' => request('email'),
+  ]);
+})->name('password.reset');
+Route::post('password/reset', function () {
+  return redirect()
+    ->route('password.request')
+    ->withErrors(['email' => 'Password reset by token is not enabled. Request a temporary password instead.']);
+})->name('password.update');
+Route::get('password/confirm', function () {
+  return view('auth.passwords.confirm');
+})->middleware('auth')->name('password.confirm');
+Route::post('password/confirm', function () {
+  return back()->withErrors(['password' => 'Password confirmation is not enabled in this application.']);
+})->middleware('auth');
 Route::get('/contract/{type?}', 'ContractController@Contract');
 Route::get('/get-contract-content', 'ContractController@getContractContent');

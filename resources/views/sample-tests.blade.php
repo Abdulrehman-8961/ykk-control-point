@@ -182,6 +182,21 @@
                 margin-bottom: 0px;
             }
 
+            .TopArea .toolbar-pagination {
+                overflow-x: auto;
+                overflow-y: hidden;
+                max-width: 100%;
+            }
+
+            .TopArea .toolbar-pagination .pagination {
+                flex-wrap: nowrap;
+                white-space: nowrap;
+            }
+
+            .TopArea .toolbar-pagination .page-link {
+                white-space: nowrap;
+            }
+
             #page-header {
                 display: none;
             }
@@ -338,7 +353,7 @@
 
             .btn-link:hover {
                 /* box-shadow: -1px 2px 4px 3px #99dff9;
-                                                                                                                                                                                                                                                                                                        background: #99dff9; */
+                                                                                                                                                                                                                                                                                                            background: #99dff9; */
                 background-color: #7F7F7F;
                 border-radius: 1rem !important;
                 box-shadow: none !important;
@@ -513,7 +528,7 @@
 
             .btn-link:hover {
                 /* box-shadow: -1px 2px 4px 3px #99dff9;
-                                                                                                                                                                                                                                                                                                        background: #99dff9; */
+                                                                                                                                                                                                                                                                                                            background: #99dff9; */
                 background-color: #7F7F7F;
                 border-radius: 1rem !important;
                 box-shadow: none !important;
@@ -621,9 +636,9 @@
             }
 
             /* .tooltip .arrow::before {
-                                                                                                                                                                            border-top-color: #F2F2F2 !important;
-                                                                                                                                                                            border-bottom-color: #F2F2F2 !important;
-                                                                                                                                                                        } */
+                                                                                                                                                                                border-top-color: #F2F2F2 !important;
+                                                                                                                                                                                border-bottom-color: #F2F2F2 !important;
+                                                                                                                                                                            } */
 
             .TopArea input.form-control.searchNew {
                 height: 28px !important;
@@ -857,8 +872,8 @@
                 }
 
                 /* #SelectedSamples::-webkit-scrollbar-button {
-                                                                                height: 8px !important;
-                                                                            } */
+                                                                                    height: 8px !important;
+                                                                                } */
             }
 
 
@@ -879,6 +894,7 @@
                 background-color: rgba(0, 123, 255, 0.05);
                 box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
             }
+
             #report-modal .modal-header-new-qc,
             #workOrderReportModal .modal-header-new-qc,
             #summaryModal .modal-header-new-qc,
@@ -941,11 +957,7 @@
                             <div class="col-lg-8 pr-sm-4">
                                 <div class="row align-items-center">
                                     <div class="col-auto mr-auto text-center" style="">
-                                        <!-- <a class="btn btn-dual filterSampleTestModal d2 {{ !empty($_GET['filter_item_category']) || !empty($_GET['filter_item_code']) || !empty($_GET['description']) ? 'filter-active' : '' }} " data-custom-class="header-tooltip"
-                                                                                                                                                                                                                                                                                                data-toggle="tooltip" data-trigger="hover" data-placement="top" title=""
-                                                                                                                                                                                                                                                                                                data-original-title="Filters" href="javascript:;" id="GeneralFilters">
-                                                                                                                                                                                                                                                                                                <img src="{{ asset('public/img/cf-menu-icons/header-filter.png') }}" width="20">
-                                                                                                                                                                                                                                                                                            </a> -->
+
                                         <a class="btn btn-dual insert_sample_test d2 " data-custom-class="header-tooltip"
                                             data-toggle="tooltip" data-trigger="hover" data-placement="top" title=""
                                             data-original-title="Add Sample Test" href="javascript:;" data-toggle="modal"
@@ -982,12 +994,11 @@
                                             href="javascript:;" data-custom-class="header-tooltip" data-toggle="tooltip"
                                             data-trigger="hover" data-placement="top" title=""
                                             data-original-title="Reports" id="reportBtn">
-                                            <i class="fa-light fa-file-chart-column text-white"
-                                                style="font-size: 18px;"></i>
+                                            <img src="{{ asset('public/icons2/icon-report-white.png') }}" width="20">
                                         </a>
                                         {{-- ! change today --}}
                                     </div>
-                                    <div class="col-auto mr-auto text-center" style="">
+                                    <div class="col-auto mr-auto text-center toolbar-pagination" style="">
                                         {{ $qry->appends($_GET)->onEachSide(0)->links() }}
                                     </div>
                                     <form id="limit_form" class="ml-2 mb-0"
@@ -1012,7 +1023,7 @@
                                     @endif
                                     <!-- User Dropdown -->
                                     <div class="dropdown d-inline-block">
-                                        <a type="button" class="  " id="page-header-user-dropdown"
+                                        <a type="button" class="  " id="sample-tests-user-dropdown"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
 
@@ -1028,7 +1039,7 @@
                                             @endif
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right p-0"
-                                            aria-labelledby="page-header-user-dropdown">
+                                            aria-labelledby="sample-tests-user-dropdown">
 
                                             <div class="p-2">
                                                 @auth
@@ -1442,9 +1453,8 @@
                                                             aria-expanded="false">
                                                             {{-- <img src="{{ asset('public/img/cf-menu-icons/3dots.png') }}"
                                                                 width="9"> --}}
-                                                            {{-- <i class="fa-thin fa-ellipsis-vertical"></i> --}}
-                                                            <i class="fa-light fa-ellipsis-vertical"
-                                                                style="color: #262626; font-size: 22px;"></i>
+                                                            <img src="{{ asset('public/img/cf-menu-icons/3dots.png') }}"
+                                                                width="9">
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-3dot">
                                                             <a class="dropdown-item dropdown-item-3dot edit-dot-icon"
@@ -1599,10 +1609,10 @@
                                         </div>
                                         <div class="col-sm-1 perf-str-input pl-0" style="display: none;">
                                             <!-- input type="text"
-                                                                                                                        class="form-control text-center px-1 green-box selectedStandard"
-                                                                                                                        name="selectedStandard" id="selectedStandard" data-toggle="tooltip"
-                                                                                                                        data-trigger="hover" data-placement="top" title=""
-                                                                                                                        data-original-title="Standard" readonly> -->
+                                                                                                                                class="form-control text-center px-1 green-box selectedStandard"
+                                                                                                                                name="selectedStandard" id="selectedStandard" data-toggle="tooltip"
+                                                                                                                                data-trigger="hover" data-placement="top" title=""
+                                                                                                                                data-original-title="Standard" readonly> -->
                                         </div>
                                         <input type="hidden" name="selectedUOM" value="">
                                     </div>
@@ -2055,7 +2065,9 @@ text-align: center;">
                                     style="padding-left: 9mm; padding-right: 9mm;">
                                     <button type="button" class="btn btn-yes historical"
                                         id="historical">Historical</button>
-                                    <input type="text" name="comments" id="comments" class="modal-input form-control" placeholder="Add comments" style="max-width: 300px">
+                                    <input type="text" name="comments" id="comments"
+                                        class="modal-input form-control" placeholder="Add comments"
+                                        style="max-width: 300px">
                                     <button type="button" id="submitSampleTest" class="btn btn-action">
                                         <span class="btn-action-gear d-none mr-2"><img
                                                 src="{{ asset('public/img//cf-menu-icons/gear.png') }}"></span>
@@ -2153,10 +2165,10 @@ text-align: center;">
                                         </div>
                                         <div class="col-sm-1 perf-str-input pl-0" style="display: none;">
                                             <!--   <input type="text"
-                                                                                                                        class="form-control text-center px-1 green-box selectedStandard"
-                                                                                                                        name="selectedStandard" id="editselectedStandard" data-toggle="tooltip"
-                                                                                                                        data-trigger="hover" data-placement="top" title=""
-                                                                                                                        data-original-title="Standard" readonly> -->
+                                                                                                                                class="form-control text-center px-1 green-box selectedStandard"
+                                                                                                                                name="selectedStandard" id="editselectedStandard" data-toggle="tooltip"
+                                                                                                                                data-trigger="hover" data-placement="top" title=""
+                                                                                                                                data-original-title="Standard" readonly> -->
                                         </div>
                                         <input type="hidden" name="selectedUOM" id="editselectedUOM" value="">
                                     </div>
@@ -2434,16 +2446,16 @@ text-align: center;">
                                         <div id="editSelectedSamplesConclusion"
                                             class="row align-items-center selected-items-container">
                                             <!--    <div class="col-sm-2 dimention-str" style="display: none;">
-                                                                                                                   <div class="sample-entry d-flex justify-content-center align-items-center my-2 py-3">
-                                                                                                                            <div class="">
-                                                                                                                                <div class="text-center">
-                                                                                                                                    <span class="sample-value test-avg-value">0</span><br>
-                                                                                                                                    <div class="sample-number">-<span class="test-minus">0</span> /
-                                                                                                                                        +<span class="test-plus">0</span></div>
+                                                                                                                           <div class="sample-entry d-flex justify-content-center align-items-center my-2 py-3">
+                                                                                                                                    <div class="">
+                                                                                                                                        <div class="text-center">
+                                                                                                                                            <span class="sample-value test-avg-value">0</span><br>
+                                                                                                                                            <div class="sample-number">-<span class="test-minus">0</span> /
+                                                                                                                                                +<span class="test-plus">0</span></div>
+                                                                                                                                        </div>
+                                                                                                                                    </div>
                                                                                                                                 </div>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div> -->
+                                                                                                                            </div> -->
                                             <div class="col-sm-2 perf-str" style="display: none;">
                                                 <div
                                                     class="sample-entry perf-weight-css-center d-flex align-items-center my-2 py-3">
@@ -2622,7 +2634,9 @@ text-align: center;">
                                 <div class="block-content block-content-full d-flex align-items-center justify-content-between my-3"
                                     style="padding-left: 9mm; padding-right: 9mm;">
                                     <div></div>
-                                    <input type="text" name="comments" id="edit_comments" class="modal-input form-control" placeholder="Add comments" style="max-width: 300px">
+                                    <input type="text" name="comments" id="edit_comments"
+                                        class="modal-input form-control" placeholder="Add comments"
+                                        style="max-width: 300px">
                                     <button type="button" id="editsubmitSampleTest" class="btn btn-action">
                                         <span class="btn-action-gear d-none mr-2"><img
                                                 src="{{ asset('public/img//cf-menu-icons/gear.png') }}"></span>
@@ -2782,14 +2796,14 @@ text-align: center;">
                                 </div>
                             </div>
                             <!--   <div class="block-content pt-0 form-group row mt-2 perf-str-test-type" style="display: none;">
-                                                                                                        <label class="col-sm-4 d-flex align-items-center modal-label mb-0">Standard</label>
-                                                                                                        <div class="col-sm-7">
-                                                                                                            <div class="fw-600 label-new field-color shadow-non e text-center selectedStandard"
-                                                                                                                data-toggle="tooltip" data-trigger="hover" data-placement="top" title=""
-                                                                                                                data-original-title="Standard" data="" style="font-weight: 500!important;">
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div> -->
+                                                                                                                <label class="col-sm-4 d-flex align-items-center modal-label mb-0">Standard</label>
+                                                                                                                <div class="col-sm-7">
+                                                                                                                    <div class="fw-600 label-new field-color shadow-non e text-center selectedStandard"
+                                                                                                                        data-toggle="tooltip" data-trigger="hover" data-placement="top" title=""
+                                                                                                                        data-original-title="Standard" data="" style="font-weight: 500!important;">
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div> -->
                             <div class="block-content pt-0 form-group row mt-2">
                                 <div class="col-sm-12 mb-3">
                                     <div class="fw-600 label-new field-color shadow-non e text-center selectedDesc"
@@ -3103,48 +3117,50 @@ text-align: center;">
                 </div>
             </form>
 
-<!-- Import Result Modal (exact like screenshots) -->
-<div class="modal fade" id="ImportResultModal" tabindex="-1" role="dialog" data-backdrop="static"
-     aria-labelledby="ImportResultModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 620px;">
-        <div class="modal-content" style="border-radius: 6px;">
-            <div class="block block-transparent mb-0">
-                <div class="block-header">
-                    <span class="section-header" style="font-weight:600;">Import Sample Tests</span>
-                    <button type="button" class="close close-cross" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+            <!-- Import Result Modal (exact like screenshots) -->
+            <div class="modal fade" id="ImportResultModal" tabindex="-1" role="dialog" data-backdrop="static"
+                aria-labelledby="ImportResultModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 620px;">
+                    <div class="modal-content" style="border-radius: 6px;">
+                        <div class="block block-transparent mb-0">
+                            <div class="block-header">
+                                <span class="section-header" style="font-weight:600;">Import Sample Tests</span>
+                                <button type="button" class="close close-cross" data-dismiss="modal"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
 
-                <div class="block-content" style="padding: 22px 24px 10px 24px;">
-                    @if(session('import_result') === 'success')
-                        <p class="mb-0" style="color:#666; text-align:center;">
-                            Import of {{ session('import_imported', 0) }} sample tests was successful.
-                        </p>
-                    @elseif(session('import_result') === 'partial')
-                        <p class="mb-1" style="color:#666;">
-                            {{ session('import_imported', 0) }} samples tests imported successfully.
-                        </p>
-                        <p class="mb-0" style="color:#666;">
-                            {{ session('import_failed', 0) }} sample tests failed. Download report to see which rows failed.
-                        </p>
-                    @endif
-                </div>
+                            <div class="block-content" style="padding: 22px 24px 10px 24px;">
+                                @if (session('import_result') === 'success')
+                                    <p class="mb-0" style="color:#666; text-align:center;">
+                                        Import of {{ session('import_imported', 0) }} sample tests was successful.
+                                    </p>
+                                @elseif(session('import_result') === 'partial')
+                                    <p class="mb-1" style="color:#666;">
+                                        {{ session('import_imported', 0) }} samples tests imported successfully.
+                                    </p>
+                                    <p class="mb-0" style="color:#666;">
+                                        {{ session('import_failed', 0) }} sample tests failed. Download report to see which
+                                        rows failed.
+                                    </p>
+                                @endif
+                            </div>
 
-                <div class="block-content" style="padding: 10px 24px 18px 24px;">
-                    <div class="d-flex justify-content-end">
-                        @if(session('import_result') === 'partial' && session('import_report_url'))
-                            <a href="{{ session('import_report_url') }}" class="btn btn-action"
-                               style="font-weight:600; text-decoration:none;">
-                                Download
-                            </a>
-                        @endif
+                            <div class="block-content" style="padding: 10px 24px 18px 24px;">
+                                <div class="d-flex justify-content-end">
+                                    @if (session('import_result') === 'partial' && session('import_report_url'))
+                                        <a href="{{ session('import_report_url') }}" class="btn btn-action"
+                                            style="font-weight:600; text-decoration:none;">
+                                            Download
+                                        </a>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
 
 
 
@@ -3533,9 +3549,9 @@ text-align: center;">
                                     <label class="col-sm-4 d-flex align-items-center modal-label mandatory">Date Range</label>
                                     <div class="col-sm-5 pr-0  ">
                                         <input type="text" class="js-flatpickr form-control bg-white"
-                                            id="example-flatpickr-range" name="daterange"
-                                            placeholder="Select Date Range" data-mode="range" data-alt-input="true"
-                                            data-date-format="Y-m-d" data-alt-format="d-M-Y">
+                                            id="example-flatpickr-range" name="daterange" placeholder="Select Date Range"
+                                            data-mode="range" data-alt-input="true" data-date-format="Y-m-d"
+                                            data-alt-format="d-M-Y">
                                     </div>
                                 </div>
                             </div>
@@ -3580,9 +3596,9 @@ text-align: center;">
                                     <label class="col-sm-4 d-flex align-items-center modal-label mandatory">Date Range</label>
                                     <div class="col-sm-5 pr-0  ">
                                         <input type="text" class="js-flatpickr form-control bg-white"
-                                            id="example-flatpickr-range" name="daterange"
-                                            placeholder="Select Date Range" data-mode="range" data-alt-input="true"
-                                            data-date-format="Y-m-d" data-alt-format="d-M-Y">
+                                            id="example-flatpickr-range" name="daterange" placeholder="Select Date Range"
+                                            data-mode="range" data-alt-input="true" data-date-format="Y-m-d"
+                                            data-alt-format="d-M-Y">
                                     </div>
                                 </div>
                             </div>
@@ -4706,19 +4722,26 @@ text-align: center;">
                                 //         displacement
                                 //     });
                                 // }
-                                const force = parseFloat(cols[1] ? cols[1].replace(/"/g, '').trim() : NaN); // Column B (N)
+                                const force = parseFloat(cols[1] ? cols[1].replace(/"/g, '')
+                                .trim() : NaN); // Column B (N)
 
                                 if (!isNaN(force)) {
-                                    importedSamples.push({ value: force }); // store as value
+                                    importedSamples.push({
+                                        value: force
+                                    }); // store as value
                                 }
                             } else if (firstCol === "mean") {
-                                summaryStats.mean = parseFloat(cols[1] ? cols[1].replace(/"/g,'').trim() : NaN); // Column B
+                                summaryStats.mean = parseFloat(cols[1] ? cols[1].replace(/"/g, '')
+                                    .trim() : NaN); // Column B
                             } else if (firstCol === "minimum") {
-                                summaryStats.minimum = parseFloat(cols[1] ? cols[1].replace(/"/g,'').trim() : NaN); // Column B
+                                summaryStats.minimum = parseFloat(cols[1] ? cols[1].replace(/"/g,
+                                    '').trim() : NaN); // Column B
                             } else if (firstCol === "maximum") {
-                                summaryStats.maximum = parseFloat(cols[1] ? cols[1].replace(/"/g,'').trim() : NaN); // Column B
+                                summaryStats.maximum = parseFloat(cols[1] ? cols[1].replace(/"/g,
+                                    '').trim() : NaN); // Column B
                             } else if (firstCol === "standard deviation") {
-                                summaryStats.stdDev = parseFloat(cols[1] ? cols[1].replace(/"/g,'').trim() : NaN); // Column B
+                                summaryStats.stdDev = parseFloat(cols[1] ? cols[1].replace(/"/g, '')
+                                    .trim() : NaN); // Column B
                                 return false;
                             }
                         });
@@ -4737,7 +4760,8 @@ text-align: center;">
                                 `<input type="text" name="sample[]" class="d-none">`);
                             // $(`input[name="sample[]"]:eq(${index})`).val(sample.displacement)
                             //     .trigger('change');
-                            $(`input[name="sample[]"]:eq(${index})`).val(sample.value).trigger('change');
+                            $(`input[name="sample[]"]:eq(${index})`).val(sample.value).trigger(
+                                'change');
 
                         });
 
@@ -10226,21 +10250,21 @@ text-align: center;">
                 });
                 Dashmix.helpers('rangeslider')
                 @if (Session::has('success'))
-                Dashmix.helpers('notify', {
-                    from: 'bottom',
-                    align: 'left',
-                    message: `{!! Session::get('success') !!}`,
-                    delay: 8000
-                });
+                    Dashmix.helpers('notify', {
+                        from: 'bottom',
+                        align: 'left',
+                        message: `{!! Session::get('success') !!}`,
+                        delay: 8000
+                    });
                 @endif
 
                 @if (Session::has('error'))
-                Dashmix.helpers('notify', {
-                    from: 'bottom',
-                    align: 'left',
-                    message: `{{ Session::get('error') }}`,
-                    delay: 8000
-                });
+                    Dashmix.helpers('notify', {
+                        from: 'bottom',
+                        align: 'left',
+                        message: `{{ Session::get('error') }}`,
+                        delay: 8000
+                    });
                 @endif
 
 
@@ -10740,245 +10764,257 @@ text-align: center;">
                     });
                 }, 300);
             });
-            $(document).on('click', '#workOrderReportModal #generateReportBtn', async function () {
-  const btn = $(this);
-  btn.prop('disabled', true);
+            $(document).on('click', '#workOrderReportModal #generateReportBtn', async function() {
+                const btn = $(this);
+                btn.prop('disabled', true);
 
-  try {
-    // Get report type
-    const report_name = $('#workOrderReportModal #report_name').val();
-    const mfg_dept = $('#workOrderReportModal #mfg_dept').val();
+                try {
+                    // Get report type
+                    const report_name = $('#workOrderReportModal #report_name').val();
+                    const mfg_dept = $('#workOrderReportModal #mfg_dept').val();
 
-    let wo_no = '';
-    let wo_no_name = '';
-    let item_category = '';
-    let item_category_name = '';
-    let test_name = '';
-    let test_name_text = '';
-    let prduction_start_date = '';
-    let prduction_end_date = '';
+                    let wo_no = '';
+                    let wo_no_name = '';
+                    let item_category = '';
+                    let item_category_name = '';
+                    let test_name = '';
+                    let test_name_text = '';
+                    let prduction_start_date = '';
+                    let prduction_end_date = '';
 
-    const total_years = $('#workOrderReportModal #total_years').val();
-    const sample_no = $('#workOrderReportModal #sample_no').val();
-    const comment_on_plan = $('#workOrderReportModal #comment_on_plan option:selected').val();
-    const open_end_separators = $('#workOrderReportModal #open_end_separators').val();
-    const chain_special = $('#workOrderReportModal #chain_special').val();
-    const closed_end_zippers = $('#workOrderReportModal #closed_end_zippers').val();
-    const closed_end_open_end = $('#workOrderReportModal #closed_end_open_end').val();
-    const monthly_report_no = $('#workOrderReportModal #monthly_report_no').val();
-    const sample_remarks = $('#workOrderReportModal #sample_remarks').val();
+                    const total_years = $('#workOrderReportModal #total_years').val();
+                    const sample_no = $('#workOrderReportModal #sample_no').val();
+                    const comment_on_plan = $('#workOrderReportModal #comment_on_plan option:selected').val();
+                    const open_end_separators = $('#workOrderReportModal #open_end_separators').val();
+                    const chain_special = $('#workOrderReportModal #chain_special').val();
+                    const closed_end_zippers = $('#workOrderReportModal #closed_end_zippers').val();
+                    const closed_end_open_end = $('#workOrderReportModal #closed_end_open_end').val();
+                    const monthly_report_no = $('#workOrderReportModal #monthly_report_no').val();
+                    const sample_remarks = $('#workOrderReportModal #sample_remarks').val();
 
-    // Common validations
-    if (!total_years) {
-      showCustomWarningNotification('Please enter total year.', "300px");
-      btn.prop('disabled', false);
-      return;
-    }
-    if (!sample_no) {
-      showCustomWarningNotification('Please enter sample no.', "300px");
-      btn.prop('disabled', false);
-      return;
-    }
+                    // Common validations
+                    if (!total_years) {
+                        showCustomWarningNotification('Please enter total year.', "300px");
+                        btn.prop('disabled', false);
+                        return;
+                    }
+                    if (!sample_no) {
+                        showCustomWarningNotification('Please enter sample no.', "300px");
+                        btn.prop('disabled', false);
+                        return;
+                    }
 
-    // Report-specific validations
-    if (report_name === "by-wo") {
-      wo_no = $('#workOrderReportModal #wo_no option:selected').val();
-      wo_no_name = $('#workOrderReportModal #wo_no option:selected').text();
+                    // Report-specific validations
+                    if (report_name === "by-wo") {
+                        wo_no = $('#workOrderReportModal #wo_no option:selected').val();
+                        wo_no_name = $('#workOrderReportModal #wo_no option:selected').text();
 
-      if (!wo_no) {
-        showCustomWarningNotification('Please select WO No.', "300px");
-        btn.prop('disabled', false);
-        return;
-      }
+                        if (!wo_no) {
+                            showCustomWarningNotification('Please select WO No.', "300px");
+                            btn.prop('disabled', false);
+                            return;
+                        }
 
-    } else if (report_name === "by-itemcat") {
-      prduction_start_date = $('#workOrderReportModal #prduction_start_date').val();
-      prduction_end_date = $('#workOrderReportModal #prduction_end_date').val();
-      item_category = $('#workOrderReportModal #item_category option:selected').val();
-      item_category_name = $('#workOrderReportModal #item_category option:selected').text().trim();
+                    } else if (report_name === "by-itemcat") {
+                        prduction_start_date = $('#workOrderReportModal #prduction_start_date').val();
+                        prduction_end_date = $('#workOrderReportModal #prduction_end_date').val();
+                        item_category = $('#workOrderReportModal #item_category option:selected').val();
+                        item_category_name = $('#workOrderReportModal #item_category option:selected').text()
+                    .trim();
 
-      if (!item_category) {
-        showCustomWarningNotification('Please select Item Category.', "300px");
-        btn.prop('disabled', false);
-        return;
-      }
+                        if (!item_category) {
+                            showCustomWarningNotification('Please select Item Category.', "300px");
+                            btn.prop('disabled', false);
+                            return;
+                        }
 
-      const startDate = new Date(prduction_start_date);
-      const endDate = new Date(prduction_end_date);
-      if (startDate > endDate) {
-        showCustomWarningNotification('Production Start Date cannot be greater than Production End Date.', "300px");
-        btn.prop('disabled', false);
-        return;
-      }
+                        const startDate = new Date(prduction_start_date);
+                        const endDate = new Date(prduction_end_date);
+                        if (startDate > endDate) {
+                            showCustomWarningNotification(
+                                'Production Start Date cannot be greater than Production End Date.', "300px");
+                            btn.prop('disabled', false);
+                            return;
+                        }
 
-    } else if (report_name === "by-test") {
-      prduction_start_date = $('#workOrderReportModal #prduction_start_date').val();
-      prduction_end_date = $('#workOrderReportModal #prduction_end_date').val();
-      test_name = $('#workOrderReportModal #test_name option:selected').val();
-      test_name_text = $('#workOrderReportModal #test_name option:selected').text().trim();
+                    } else if (report_name === "by-test") {
+                        prduction_start_date = $('#workOrderReportModal #prduction_start_date').val();
+                        prduction_end_date = $('#workOrderReportModal #prduction_end_date').val();
+                        test_name = $('#workOrderReportModal #test_name option:selected').val();
+                        test_name_text = $('#workOrderReportModal #test_name option:selected').text().trim();
 
-      if (!prduction_start_date || !prduction_end_date) {
-        showCustomWarningNotification('Please enter both Production Start Date and Production End Date.', "300px");
-        btn.prop('disabled', false);
-        return;
-      }
+                        if (!prduction_start_date || !prduction_end_date) {
+                            showCustomWarningNotification(
+                                'Please enter both Production Start Date and Production End Date.', "300px");
+                            btn.prop('disabled', false);
+                            return;
+                        }
 
-      const startDate = new Date(prduction_start_date);
-      const endDate = new Date(prduction_end_date);
-      if (startDate > endDate) {
-        showCustomWarningNotification('Production Start Date cannot be greater than Production End Date.', "300px");
-        btn.prop('disabled', false);
-        return;
-      }
+                        const startDate = new Date(prduction_start_date);
+                        const endDate = new Date(prduction_end_date);
+                        if (startDate > endDate) {
+                            showCustomWarningNotification(
+                                'Production Start Date cannot be greater than Production End Date.', "300px");
+                            btn.prop('disabled', false);
+                            return;
+                        }
 
-      if (!test_name) {
-        showCustomWarningNotification('Please select Test Name.', "300px");
-        btn.prop('disabled', false);
-        return;
-      }
-    }
+                        if (!test_name) {
+                            showCustomWarningNotification('Please select Test Name.', "300px");
+                            btn.prop('disabled', false);
+                            return;
+                        }
+                    }
 
-    // Existence check
-    const isExist = await checkExistance(
-      report_name,
-      total_years,
-      sample_no,
-      wo_no,
-      item_category,
-      test_name,
-      prduction_start_date,
-      prduction_end_date
-    );
+                    // Existence check
+                    const isExist = await checkExistance(
+                        report_name,
+                        total_years,
+                        sample_no,
+                        wo_no,
+                        item_category,
+                        test_name,
+                        prduction_start_date,
+                        prduction_end_date
+                    );
 
-    if (!isExist) {
-      btn.prop('disabled', false);
-      return;
-    }
+                    if (!isExist) {
+                        btn.prop('disabled', false);
+                        return;
+                    }
 
-    // ---- loader show/hide safety (fix "too quick" + stuck backdrop) ----
-    let loaderShown = false;
-    let hideRequested = false;
+                    // ---- loader show/hide safety (fix "too quick" + stuck backdrop) ----
+                    let loaderShown = false;
+                    let hideRequested = false;
 
-    $('#reportLoaderModal')
-      .off('shown.bs.modal.hidden.bs.modal') // important: avoid multiple handlers
-      .on('shown.bs.modal', function () {
-        loaderShown = true;
-        if (hideRequested) {
-          $('#reportLoaderModal').modal('hide');
-        }
-      })
-      .on('hidden.bs.modal', function () {
-        // hard cleanup in case backdrop sticks
-        $('.modal-backdrop').remove();
-        $('body').removeClass('modal-open').css('padding-right', '');
-      });
+                    $('#reportLoaderModal')
+                        .off('shown.bs.modal.hidden.bs.modal') // important: avoid multiple handlers
+                        .on('shown.bs.modal', function() {
+                            loaderShown = true;
+                            if (hideRequested) {
+                                $('#reportLoaderModal').modal('hide');
+                            }
+                        })
+                        .on('hidden.bs.modal', function() {
+                            // hard cleanup in case backdrop sticks
+                            $('.modal-backdrop').remove();
+                            $('body').removeClass('modal-open').css('padding-right', '');
+                        });
 
-    function safeHideLoader() {
-      if (loaderShown) {
-        $('#reportLoaderModal').modal('hide');
-      } else {
-        hideRequested = true; // hide as soon as it finishes opening
-      }
-    }
+                    function safeHideLoader() {
+                        if (loaderShown) {
+                            $('#reportLoaderModal').modal('hide');
+                        } else {
+                            hideRequested = true; // hide as soon as it finishes opening
+                        }
+                    }
 
-    // Hide main modal and show loader
-    $('#workOrderReportModal').modal('hide');
+                    // Hide main modal and show loader
+                    $('#workOrderReportModal').modal('hide');
 
-    // show loader with static options
-    loaderShown = false;
-    hideRequested = false;
-    $('#reportLoaderModal').modal({ backdrop: 'static', keyboard: false, show: true });
+                    // show loader with static options
+                    loaderShown = false;
+                    hideRequested = false;
+                    $('#reportLoaderModal').modal({
+                        backdrop: 'static',
+                        keyboard: false,
+                        show: true
+                    });
 
-    // Fire the request (no need for setTimeout, but you can keep it if you want)
-    $.ajax({
-      url: '{{ url('/reports/work-order') }}',
-      method: 'POST',
-      data: {
-        report_name,
-        mfg_dept,
-        wo_no,
-        wo_no_name,
-        item_category,
-        item_category_name,
-        test_name,
-        test_name_text,
-        prduction_start_date,
-        prduction_end_date,
-        total_years,
-        sample_no,
-        comment_on_plan,
-        open_end_separators,
-        chain_special,
-        closed_end_zippers,
-        closed_end_open_end,
-        monthly_report_no,
-        sample_remarks,
-        _token: '{{ csrf_token() }}'
-      },
-      xhrFields: { responseType: 'blob' },
+                    // Fire the request (no need for setTimeout, but you can keep it if you want)
+                    $.ajax({
+                        url: '{{ url('/reports/work-order') }}',
+                        method: 'POST',
+                        data: {
+                            report_name,
+                            mfg_dept,
+                            wo_no,
+                            wo_no_name,
+                            item_category,
+                            item_category_name,
+                            test_name,
+                            test_name_text,
+                            prduction_start_date,
+                            prduction_end_date,
+                            total_years,
+                            sample_no,
+                            comment_on_plan,
+                            open_end_separators,
+                            chain_special,
+                            closed_end_zippers,
+                            closed_end_open_end,
+                            monthly_report_no,
+                            sample_remarks,
+                            _token: '{{ csrf_token() }}'
+                        },
+                        xhrFields: {
+                            responseType: 'blob'
+                        },
 
-      success: function (blob, status, xhr) {
-        const contentType = (xhr.getResponseHeader('Content-Type') || '').toLowerCase();
+                        success: function(blob, status, xhr) {
+                            const contentType = (xhr.getResponseHeader('Content-Type') || '')
+                                .toLowerCase();
 
-        // JSON response packed as blob
-        if (contentType.includes('application/json')) {
-          const reader = new FileReader();
-          reader.onload = function () {
-            try {
-              const json = JSON.parse(reader.result);
-              showCustomWarningNotification(json.message, "300px");
-            } catch (e) {
-              showCustomWarningNotification('Unexpected server response.', "300px");
-            }
-          };
-          reader.readAsText(blob);
-          return;
-        }
+                            // JSON response packed as blob
+                            if (contentType.includes('application/json')) {
+                                const reader = new FileReader();
+                                reader.onload = function() {
+                                    try {
+                                        const json = JSON.parse(reader.result);
+                                        showCustomWarningNotification(json.message, "300px");
+                                    } catch (e) {
+                                        showCustomWarningNotification('Unexpected server response.',
+                                            "300px");
+                                    }
+                                };
+                                reader.readAsText(blob);
+                                return;
+                            }
 
-        resetModalFields('#workOrderReportModal');
+                            resetModalFields('#workOrderReportModal');
 
-        // filename
-        let filename = 'testing_summary.xlsx';
-        const disposition = xhr.getResponseHeader('Content-Disposition') || '';
-        const match = disposition.match(/filename\*?=(?:UTF-8''|")?([^\";]+)"?/i);
-        if (match && match[1]) filename = decodeURIComponent(match[1]);
+                            // filename
+                            let filename = 'testing_summary.xlsx';
+                            const disposition = xhr.getResponseHeader('Content-Disposition') || '';
+                            const match = disposition.match(/filename\*?=(?:UTF-8''|")?([^\";]+)"?/i);
+                            if (match && match[1]) filename = decodeURIComponent(match[1]);
 
-        // download
-        const url = window.URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = filename;
-        document.body.appendChild(link);
-        link.click();
+                            // download
+                            const url = window.URL.createObjectURL(blob);
+                            const link = document.createElement('a');
+                            link.href = url;
+                            link.download = filename;
+                            document.body.appendChild(link);
+                            link.click();
 
-        setTimeout(() => {
-          link.remove();
-          window.URL.revokeObjectURL(url);
-        }, 0);
-      },
+                            setTimeout(() => {
+                                link.remove();
+                                window.URL.revokeObjectURL(url);
+                            }, 0);
+                        },
 
-      error: function () {
-        alert('Failed to generate report.');
-        resetModalFields('#workOrderReportModal');
-      },
+                        error: function() {
+                            alert('Failed to generate report.');
+                            resetModalFields('#workOrderReportModal');
+                        },
 
-      complete: function () {
-        // ALWAYS runs, even if success returned early
-        safeHideLoader();
-        btn.prop('disabled', false);
-      }
-    });
+                        complete: function() {
+                            // ALWAYS runs, even if success returned early
+                            safeHideLoader();
+                            btn.prop('disabled', false);
+                        }
+                    });
 
-  } catch (e) {
-    // any unexpected JS error
-    btn.prop('disabled', false);
-    try {
-      $('#reportLoaderModal').modal('hide');
-      $('.modal-backdrop').remove();
-      $('body').removeClass('modal-open').css('padding-right', '');
-    } catch (_) {}
-  }
-});
+                } catch (e) {
+                    // any unexpected JS error
+                    btn.prop('disabled', false);
+                    try {
+                        $('#reportLoaderModal').modal('hide');
+                        $('.modal-backdrop').remove();
+                        $('body').removeClass('modal-open').css('padding-right', '');
+                    } catch (_) {}
+                }
+            });
 
             // $(document).on('click', '#workOrderReportModal #generateReportBtn', async function() {
             //     var btn = $(this);
@@ -11200,11 +11236,11 @@ text-align: center;">
                             prduction_end_date: prduction_end_date,
                             _token: '{{ csrf_token() }}'
                         },
-                        success: function (res) {
+                        success: function(res) {
                             // SUCCESS = allow continue
                             resolve(true);
                         },
-                        error: function (xhr) {
+                        error: function(xhr) {
                             // ERROR = stop and show message
                             let msg = 'Something went wrong.';
                             if (xhr.responseJSON && xhr.responseJSON.message) {
@@ -11339,12 +11375,12 @@ text-align: center;">
                 });
             });
         </script>
-        @if(session('import_result'))
-        <script>
-            $(document).ready(function () {
-                $('#ImportResultModal').modal('show');
-            });
-        </script>
+        @if (session('import_result'))
+            <script>
+                $(document).ready(function() {
+                    $('#ImportResultModal').modal('show');
+                });
+            </script>
         @endif
 
     @endsection('js')

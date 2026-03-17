@@ -4,37 +4,20 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 
 
 class LoginController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
-
-    use AuthenticatesUsers; 
-
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
-  
-       protected $redirectTo = RouteServiceProvider::HOME;
-
-   
+    protected $redirectTo = RouteServiceProvider::HOME;
 
 
     /**
@@ -47,38 +30,63 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-        // ✅ Option 1: Runs after successful login
-protected function authenticated(Request $request, $user)
-{ 
-    if ($user->is_deleted) {
-        Auth::logout();
-
-        return redirect()->back()
-            ->withErrors(['general' => 'Account not found.']);
-    }
-    if ($user->portal_access == 0) {
-        Auth::logout();
-
-        return redirect()->back()
-            ->withErrors(['general' => 'Your account is inactive. Please contact support.']);
-    }
-
-    // Redirect to password change screen if must_change is enabled
-    if ($user->must_change == 1) {
-        return redirect('/change-password');
-    }
-
-    // Default redirect (you can change '/home' to wherever you want)
-    return redirect()->intended($this->redirectPath());
-}
-
-
-    // ✅ Option 2: Runs when login fails (wrong credentials)
-    protected function sendFailedLoginResponse(\Illuminate\Http\Request $request)
-
+    public function showLoginForm()
     {
-        throw ValidationException::withMessages([
-            'general' => [trans('auth.failed')],
+        return view('auth.login');
+    }
+
+    public function login(Request $request): RedirectResponse
+    {
+        $credentials = $request->validate([
+            'email' => ['required', 'string'],
+            'password' => ['required', 'string'],
         ]);
+
+        if (! Auth::attempt([
+            'email' => $credentials['email'],
+            'password' => $credentials['password'],
+        ], $request->boolean('remember'))) {
+            throw ValidationException::withMessages([
+                'general' => [trans('auth.failed')],
+            ]);
+        }
+
+        $request->session()->regenerate();
+
+        return $this->authenticated($request, Auth::user())
+            ?? redirect()->intended($this->redirectTo);
+    }
+
+    protected function authenticated(Request $request, $user): ?RedirectResponse
+    {
+        if ($user->is_deleted) {
+            Auth::logout();
+
+            return redirect()->back()
+                ->withErrors(['general' => 'Account not found.']);
+        }
+
+        if ($user->portal_access == 0) {
+            Auth::logout();
+
+            return redirect()->back()
+                ->withErrors(['general' => 'Your account is inactive. Please contact support.']);
+        }
+
+        if ($user->must_change == 1) {
+            return redirect('/change-password');
+        }
+
+        return null;
+    }
+
+    public function logout(Request $request): RedirectResponse
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('login');
     }
 }

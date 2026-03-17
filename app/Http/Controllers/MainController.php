@@ -58,7 +58,7 @@ use Validator;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 
-use Picqer\Barcode\BarcodeGeneratorPNG;
+use Milon\Barcode\DNS1D;
 
 class MainController extends Controller
 {
@@ -4222,10 +4222,8 @@ padding-bottom: 5px;">
         $audit_trail = DB::table('workorder_audit_trail as c')->select('c.*', 'u.firstname', 'u.lastname', 'u.user_image')->leftjoin('users as u', 'u.id', '=', 'c.user_id')->where('c.workorder_id', $id)->get();
 
 
-        $generator = new BarcodeGeneratorPNG();
-        $barcode = base64_encode(
-            $generator->getBarcode($q->workorder_no, $generator::TYPE_CODE_128)
-        );
+        $barcodeGenerator = new DNS1D();
+        $barcode = $barcodeGenerator->getBarcodePNG($q->workorder_no, 'C128');
 
         // $link='virtual?id='.$l->id.'&page='.(ceil($l->rownumber_virtual/10));
         $html .= '
@@ -5974,10 +5972,8 @@ padding-bottom: 5px;">
 
         $audit_trail = DB::table('sample_tests_audit_trail as c')->select('c.*', 'u.firstname', 'u.lastname', 'u.user_image')->leftjoin('users as u', 'u.id', '=', 'c.user_id')->where('c.sample_test_id', $id)->get();
 
-        $generator = new BarcodeGeneratorPNG();
-        $barcode = base64_encode(
-            $generator->getBarcode($q->workorder_no, $generator::TYPE_CODE_128)
-        );
+        $barcodeGenerator = new DNS1D();
+        $barcode = $barcodeGenerator->getBarcodePNG($q->workorder_no, 'C128');
 
         $icons = [
             'pass' => 'greencheck.png',

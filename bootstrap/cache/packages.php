@@ -1,38 +1,14 @@
 <?php return array (
-  'facade/ignition' => 
+  'barryvdh/laravel-dompdf' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Facade\\Ignition\\IgnitionServiceProvider',
-    ),
     'aliases' => 
     array (
-      'Flare' => 'Facade\\Ignition\\Facades\\Flare',
+      'PDF' => 'Barryvdh\\DomPDF\\Facade\\Pdf',
+      'Pdf' => 'Barryvdh\\DomPDF\\Facade\\Pdf',
     ),
-  ),
-  'fideloper/proxy' => 
-  array (
     'providers' => 
     array (
-      0 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
-    ),
-  ),
-  'fruitcake/laravel-cors' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Fruitcake\\Cors\\CorsServiceProvider',
-    ),
-  ),
-  'intervention/image' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Intervention\\Image\\ImageServiceProvider',
-    ),
-    'aliases' => 
-    array (
-      'Image' => 'Intervention\\Image\\Facades\\Image',
+      0 => 'Barryvdh\\DomPDF\\ServiceProvider',
     ),
   ),
   'laravel/tinker' => 
@@ -42,34 +18,27 @@
       0 => 'Laravel\\Tinker\\TinkerServiceProvider',
     ),
   ),
-  'laravel/ui' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Laravel\\Ui\\UiServiceProvider',
-    ),
-  ),
   'maatwebsite/excel' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Maatwebsite\\Excel\\ExcelServiceProvider',
-    ),
     'aliases' => 
     array (
       'Excel' => 'Maatwebsite\\Excel\\Facades\\Excel',
     ),
+    'providers' => 
+    array (
+      0 => 'Maatwebsite\\Excel\\ExcelServiceProvider',
+    ),
   ),
   'milon/barcode' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Milon\\Barcode\\BarcodeServiceProvider',
-    ),
     'aliases' => 
     array (
       'DNS1D' => 'Milon\\Barcode\\Facades\\DNS1DFacade',
       'DNS2D' => 'Milon\\Barcode\\Facades\\DNS2DFacade',
+    ),
+    'providers' => 
+    array (
+      0 => 'Milon\\Barcode\\BarcodeServiceProvider',
     ),
   ),
   'nesbot/carbon' => 
@@ -79,22 +48,18 @@
       0 => 'Carbon\\Laravel\\ServiceProvider',
     ),
   ),
-  'niklasravnsborg/laravel-pdf' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'niklasravnsborg\\LaravelPdf\\PdfServiceProvider',
-    ),
-    'aliases' => 
-    array (
-      'PDF' => 'niklasravnsborg\\LaravelPdf\\Facades\\Pdf',
-    ),
-  ),
   'nunomaduro/collision' => 
   array (
     'providers' => 
     array (
       0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+    ),
+  ),
+  'nunomaduro/termwind' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Termwind\\Laravel\\TermwindServiceProvider',
     ),
   ),
   'simplesoftwareio/simple-qrcode' => 
@@ -110,13 +75,13 @@
   ),
   'yajra/laravel-datatables-oracle' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Yajra\\DataTables\\DataTablesServiceProvider',
-    ),
     'aliases' => 
     array (
       'DataTables' => 'Yajra\\DataTables\\Facades\\DataTables',
+    ),
+    'providers' => 
+    array (
+      0 => 'Yajra\\DataTables\\DataTablesServiceProvider',
     ),
   ),
 );
